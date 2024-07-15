@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
+  background-color: #ffd3ac75;
 }
 
 .container {
@@ -228,9 +229,35 @@ body {
   font-weight: lighter;
 }
 
+.time {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.lucky{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  /* padding: 10px; */
+}
+
+/* .memories{
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.mem{
+  height: 130px;
+  width: 130px;
+} */
+
 #replay {
   z-index: 3;
   cursor: pointer;
+  color: #8bf;
 }
 
 /* Media Queries */
