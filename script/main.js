@@ -28,6 +28,9 @@ const animationTimeline = () => {
 
   const tl = new TimelineMax();
 
+  const audio = document.getElementById("background-audio");
+  audio.play();
+
   tl.to(".container", 0.1, {
     visibility: "visible",
   })
@@ -255,6 +258,8 @@ const animationTimeline = () => {
       y: 30,
       zIndex: "-1",
     })
+    .from(".extra-slide", 0.7, ideaTextTrans) // Adding new slide
+    .to(".extra-slide", 0.7, ideaTextTransLeave, "+=1.5")
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
@@ -265,6 +270,13 @@ const animationTimeline = () => {
       "+=1"
     );
 
+
+     // Stop audio when the animation ends
+     tl.eventCallback("onComplete", () => {
+      audio.pause();
+      audio.currentTime = 0;
+  });
+
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
@@ -272,8 +284,11 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
+    audio.play();
   });
 };
+
+
 
 // Import the data to customize and insert them into page
 const fetchData = () => {

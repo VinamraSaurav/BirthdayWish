@@ -5,8 +5,12 @@ html {
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
-  background-color: #ffd3ac75;
+  background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+color : #333;
 }
+
+
 
 .container {
   height: 100vh;
@@ -229,6 +233,10 @@ body {
   font-weight: lighter;
 }
 
+.extra-slide{
+  font-size: 2rem;
+}
+
 .time {
   font-size: 3rem;
   font-weight: bold;
@@ -241,6 +249,16 @@ body {
   align-items:center;
   flex-wrap:wrap;
   /* padding: 10px; */
+}
+
+.last-smile{
+  border-radius: 100%;
+  border : 1px solid #333;
+  padding: 1px;
+  height: 40px;
+  width: 40px;
+  
+  margin: auto auto;
 }
 
 /* .memories{
