@@ -261,6 +261,9 @@ color : #333;
   margin: auto auto;
 }
 
+.girl-dp{
+  border-radius: 100%;
+}
 /* .memories{
   font-size: 3rem;
   font-weight: bold;
